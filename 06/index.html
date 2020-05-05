@@ -315,7 +315,7 @@
                         camera.position.y = this.floorStatus * floorHeight + 8 + floorHeight / 2;
                     }
 
-                    info1 += "</br> place:" + this.place;
+              //	console.log( "place:", this.place );
 
                     // left stair
                     if (camera.position.x < 3.1 && camera.position.z < 5.15 && camera.position.z > -5.75) {
@@ -324,7 +324,7 @@
 
                         camera.position.y = this.floorStatus * floorHeight + 8 + Math.floor((this.distStairs - camera.position.z - 5.75) / this.distOneStair) * 1.5;
 
-                        info1 += "</br> stair:" + Math.floor((this.distStairs - camera.position.z - 5.75) / this.distOneStair);
+                        console.log( "stair:", Math.floor((this.distStairs - camera.position.z - 5.75) / this.distOneStair) );
                     }
                     // right stair
                     if (camera.position.x > 3.1 && camera.position.z < 5.15 && camera.position.z > -5.75) {
@@ -334,7 +334,7 @@
 
                         camera.position.y = this.floorStatus * floorHeight + floorHeight / 2 + 8 + Math.floor((camera.position.z + 5.75) / this.distOneStair) * 1.5;
 
-                        info1 += "</br> stair:" + Math.floor((camera.position.z + 5.75) / this.distOneStair);
+                        console.log( "stair:", Math.floor((camera.position.z + 5.75) / this.distOneStair) );
                     }
 
                     if (this.floorStatus == 3 && player.target.x < 3.1 && player.target.z < 5.15) {
